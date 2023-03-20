@@ -21,8 +21,7 @@ to document your module.
    :maxdepth: 2
    :caption: Galleries:
 
-   auto_gallery-1/index
-   auto_gallery-2/index
+   auto_gallery/index
 
 
 Indices and tables
