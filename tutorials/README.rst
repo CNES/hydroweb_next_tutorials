@@ -1,4 +1,4 @@
 Sample gallery 1
 ================
 
-Below are examples using my module:
+Below are examples for SWOT HR beginners
