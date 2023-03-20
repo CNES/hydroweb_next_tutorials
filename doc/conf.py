@@ -22,8 +22,8 @@ from sphinx_gallery.sorting import FileNameSortKey
 # -- Project information -----------------------------------------------------
 
 project = 'sample-project'
-copyright = '2020, <Author>'
-author = '<Author>'
+copyright = '2023, CNES'
+author = 'CNES'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
@@ -65,9 +65,9 @@ html_static_path = ['_static']
 # sphinx-gallery configuration
 sphinx_gallery_conf = {
     # path to your example scripts
-    'examples_dirs': ['../sample-gallery-1', '../sample-gallery-2'],
+    'examples_dirs': ['../tutorials'],
     # path to where to save gallery generated output
-    'gallery_dirs': ['auto_gallery-1', 'auto_gallery-2'],
+    'gallery_dirs': ['auto_gallery'],
     # specify that examples should be ordered according to filename
     'within_subsection_order': FileNameSortKey,
     # directory where function granular galleries are stored
