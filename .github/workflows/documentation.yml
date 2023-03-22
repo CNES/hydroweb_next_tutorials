@@ -11,8 +11,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme sphinx-gallery pillow 
-          pip install matplotlib xarray pandas geopandas numpy
-          pip install geos shapely pyshp cartopy
+          $CONDA/bin/conda env update --file environment.yml --name base
       - name: Sphinx build
         run: |
           sphinx-build doc doc/_build
