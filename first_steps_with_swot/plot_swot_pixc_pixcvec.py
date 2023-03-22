@@ -15,14 +15,12 @@ import xarray as xr
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
-
 
 # %% 1. Read a SWOT-HR Pixel Cloud netcdf product
 # --------------------------------------------------
 
-dir_swot = "/home/hysope2/Datas/SIMU_SWOT/SWOT_sample_data_products_v1.2"
-file_swot_pxc = os.path.join(dir_swot, "L2_HR_PIXC", "SWOT_L2_HR_PIXC_001_042_078L_20220402T112209_20220402T112219_Dx0000_01.nc")
+dir_swot = "./_data/"
+file_swot_pxc = os.path.join(dir_swot, "SWOT_L2_HR_PIXC_001_042_067L_20220402T112019_20220402T112029_Dx0000_01.nc")
 
 # %%
 # read data with xarray, specifying a group in the netcdf structure
@@ -35,13 +33,12 @@ xr_pxc = xr_pxc.where(~np.isnan(xr_pxc.height))
 # %% 2. Read a SWOT-HR Pixel Cloud Vector netcdf product
 # --------------------------------------------------
 
-dir_swot = "/home/hysope2/Datas/SIMU_SWOT/SWOT_sample_data_products_v1.2"
-file_swot_pxcvec = os.path.join(dir_swot, "L2_HR_PIXCVec","SWOT_L2_HR_PIXCVec_001_042_078L_20220402T112209_20220402T112219_Dx0000_01.nc")
+file_swot_pxcvec = os.path.join(dir_swot, "SWOT_L2_HR_PIXCVec_001_042_067L_20220402T112019_20220402T112029_Dx0000_01.nc")
 
 # %%
 # read data with xarray
 
-xr_pxcvec = xr.open_dataset(file_swot_pxcvec)#, decode_cf=False, engine='h5netcdf')
+xr_pxcvec = xr.open_dataset(file_swot_pxcvec, decode_cf=False, engine='h5netcdf')
 # remove undefined values based on variable of interest
 xr_pxcvec = xr_pxcvec.where(~np.isnan(xr_pxcvec.height_vectorproc))
 

@@ -1,5 +1,5 @@
 Sample gallery SWOT beginners
-================
+=============================
 
 Below are examples for SWOT HR beginners
 
