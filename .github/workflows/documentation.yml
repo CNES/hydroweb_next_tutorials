@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme sphinx-gallery pillow
+          pip install sphinx sphinx_rtd_theme sphinx-gallery pillow matplotlib
       - name: Sphinx build
         run: |
           sphinx-build doc doc/_build
