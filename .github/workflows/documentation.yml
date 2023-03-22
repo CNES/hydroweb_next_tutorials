@@ -10,7 +10,8 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme sphinx-gallery pillow matplotlib
+          pip install sphinx sphinx_rtd_theme sphinx-gallery pillow 
+          conda install matplotlib cartopy xarray pandas geopandas numpy
       - name: Sphinx build
         run: |
           sphinx-build doc doc/_build
