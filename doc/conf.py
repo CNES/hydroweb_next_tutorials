@@ -64,7 +64,7 @@ html_static_path = ['_static']
 # sphinx-gallery configuration
 sphinx_gallery_conf = {
     # path to your example scripts
-    'examples_dirs': ['../tutorials'],
+    'examples_dirs': ['../first_steps_with_swot'],
     # path to where to save gallery generated output
     'gallery_dirs': ['auto_gallery'],
     # specify that examples should be ordered according to filename
