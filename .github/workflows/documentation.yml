@@ -8,9 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - name: Install dependencies
+      - name: Install pip dependencies
         run: |
           pip install sphinx sphinx_rtd_theme sphinx-gallery pillow 
+      - name: Add conda to system path
+        run: |
+          # $CONDA is an environment variable pointing to the root of the miniconda directory
+          #         echo $CONDA/bin >> $GITHUB_PATH
+      - name: Install conda dependencies
+        run: |
           $CONDA/bin/conda env update --file environment.yml --name base
       - name: Sphinx build
         run: |
