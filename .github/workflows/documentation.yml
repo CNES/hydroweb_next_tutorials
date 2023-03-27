@@ -18,7 +18,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           use-mamba: true
-          activate-environment: gh-doc
+          activate-environment: tutorials_env
           environment-file: doc/environment.yml
           miniforge-variant: Mambaforge
       - name: Sphinx build
