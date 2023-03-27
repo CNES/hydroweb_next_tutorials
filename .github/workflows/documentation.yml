@@ -6,21 +6,22 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout Repo
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
       - name: Install pip dependencies
         run: |
           pip install sphinx sphinx_rtd_theme sphinx-gallery pillow 
-      - name: Add conda to system path
-        run: |
-          # $CONDA is an environment variable pointing to the root of the miniconda directory
-          echo $CONDA/bin >> $GITHUB_PATH
+      - name: Setup conda environment with mambaforge
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          use-mamba: true
+          activate-environment: gh-doc
+          environment-file: doc/environment.yml
+          miniforge-variant: Mambaforge
       - name: List dependencies
         run: |
           conda list
-      - name: Install conda dependencies
-        run: |
-          $CONDA/bin/conda env update --file environment.yml --name base
+      - uses: actions/setup-python@v3
       - name: Sphinx build
         run: |
           sphinx-build doc doc/_build
