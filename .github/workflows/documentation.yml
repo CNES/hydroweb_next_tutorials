@@ -21,13 +21,11 @@ jobs:
           activate-environment: gh-doc
           environment-file: doc/environment.yml
           miniforge-variant: Mambaforge
-      - name: List dependencies
-        run: |
-          conda list
-      - uses: actions/setup-python@v3
       - name: Sphinx build
         run: |
           sphinx-build doc doc/_build
+          conda list
+          conda info --all
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
