@@ -16,5 +16,5 @@ dependencies:
   - seaborn
   - xarray
   - h5netcdf
-  - cartopy 
+  - cartopy>0.21 
   - geopandas
