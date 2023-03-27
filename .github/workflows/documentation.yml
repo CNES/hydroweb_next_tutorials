@@ -6,6 +6,9 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
       - name: checkout Repo
         uses: actions/checkout@v3
@@ -18,6 +21,7 @@ jobs:
           activate-environment: tutorials_env
           environment-file: doc/environment.yml
           miniforge-variant: Mambaforge
+          auto-activate-base: false
       - name: Sphinx build
         run: |
           sphinx-build doc doc/_build
