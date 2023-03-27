@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 # %% 1. Read a SWOT-HR Pixel Cloud netcdf product
 # --------------------------------------------------
 
-dir_swot = "first_steps_with_swot/_data/"
+dir_swot = "_data/"
 file_swot_pxc = os.path.join(dir_swot, "SWOT_L2_HR_PIXC_001_042_067L_20220402T112019_20220402T112029_Dx0000_01.nc")
 
 # %%
