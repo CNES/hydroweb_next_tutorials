@@ -16,7 +16,8 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-# %% 1. Read a SWOT-HR Pixel Cloud netcdf product
+# %%
+# 1. Read a SWOT-HR Pixel Cloud netcdf product
 # --------------------------------------------------
 
 dir_swot = "_data/"
@@ -30,7 +31,8 @@ xr_pxc = xr.open_dataset(file_swot_pxc, group="pixel_cloud")
 xr_pxc = xr_pxc.where(~np.isnan(xr_pxc.height))
 
 
-# %% 2. Read a SWOT-HR Pixel Cloud Vector netcdf product
+# %% 
+# 2. Read a SWOT-HR Pixel Cloud Vector netcdf product
 # --------------------------------------------------
 
 file_swot_pxcvec = os.path.join(dir_swot, "SWOT_L2_HR_PIXCVec_001_042_067L_20220402T112019_20220402T112029_Dx0000_01.nc")
@@ -43,13 +45,13 @@ xr_pxcvec = xr.open_dataset(file_swot_pxcvec, decode_cf=False, engine='h5netcdf'
 xr_pxcvec = xr_pxcvec.where(~np.isnan(xr_pxcvec.height_vectorproc))
 
 
-# %% 3. Plot data on maps with cartopy
+# %%
+# 3. Plot data on maps with cartopy
 # --------------------------------------------------
 
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 
-# %%
 
 def customize_map(ax, cb, label, crs=ccrs.PlateCarree()):
     """This function customizes a map with projection and returns the plt.axes instance"""
@@ -79,8 +81,7 @@ def customize_map(ax, cb, label, crs=ccrs.PlateCarree()):
     return ax
 
 
-# %% Create Figure and Axes
-# ************************
+# Create Figure and Axes
 crs = ccrs.PlateCarree()
 fig, axs = plt.subplots(
     nrows=1,ncols=2,
@@ -89,8 +90,7 @@ fig, axs = plt.subplots(
     frameon=True,
     )
 
-# %% Pixel Cloud Data
-# ************************
+# Pixel Cloud Data
 # plot data on the map with scatter function
 
 cb0 = axs[0].scatter(
@@ -118,8 +118,7 @@ axs[0].set_extent(
 axs[0].set_title("Pixel Cloud")
 
 
-# %% Pixel Cloud Vector Data.
-# ************************
+# Pixel Cloud Vector Data.
 # plot data on the map with scatter function
 
 cb1 = axs[1].scatter(
@@ -147,6 +146,7 @@ axs[1].set_extent(
     )
 
 axs[1].set_title("Pixel Cloud Vector")
+fig.show()
 
 
 # %%
