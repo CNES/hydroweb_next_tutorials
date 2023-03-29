@@ -78,19 +78,19 @@ html_theme_options = {
         {
             "name": "CNES",
             "url": "https://cnes.fr",
-            "icon": "cnes-logo-blue.png",
+            "icon": "_static/cnes-logo-blue.png",
             "type": "local",
         },
         {
             "name": "Theia",
             "url": "https://www.theia-land.fr/en/homepage-en/",
-            "icon": "theia-logo-vertical.png",
+            "icon": "_static/theia-logo-vertical.png",
             "type": "local",
         },
         {
             "name": "hydroweb.next",
             "url": "https://www.hydroweb.next.theia-land.fr",
-            "icon": "hydrowebnext.png",
+            "icon": "_static/hydrowebnext.png",
             "type": "local",
         },
    ]
