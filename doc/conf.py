@@ -67,7 +67,7 @@ html_theme_options = {
     "logo": {
         "link": "https://hydroweb.next.theia-land.fr/",
         "alt_text": "hydroweb.next"
-    }
+    },
     "favicons": [
         {
            "rel": "icon",
