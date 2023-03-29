@@ -3,10 +3,13 @@
 
 # Copyright CNES
  
-# %%
-# Read and plot a SWOT-HR Raster products 
-# ---------------------------------------
-# In this notebook, we show how to read the SWOT-HR raster 100m and 250m netcdf products with xarray and how to represent a variable on a map with cartopy.
+
+"""
+Read and plot a SWOT-HR Raster products 
+==========================================================================
+
+In this example, we show how to read the SWOT-HR raster 100m or 250m netcdf products with xarray and how to represent a variable on a map with cartopy.
+"""
 
 # %%
 # Libraries
