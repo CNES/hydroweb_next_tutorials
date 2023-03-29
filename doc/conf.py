@@ -67,7 +67,7 @@ sphinx_gallery_conf = {
     # path to your example scripts
     'examples_dirs': ['../first_steps_with_swot'],
     # path to where to save gallery generated output
-    'gallery_dirs': ['auto_gallery'],
+    'gallery_dirs': ['swot_gallery'],
     # specify that examples should be ordered according to filename
     'within_subsection_order': FileNameSortKey,
     # directory where function granular galleries are stored

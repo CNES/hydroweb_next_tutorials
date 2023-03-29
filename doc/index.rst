@@ -14,14 +14,12 @@ to document your module.
    :caption: Contents:
 
    getting_started
-   function
-   class
 
 .. toctree::
    :maxdepth: 2
    :caption: Galleries:
 
-   auto_gallery/index
+   swot_gallery/index
 
 
 Indices and tables
