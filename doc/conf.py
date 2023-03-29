@@ -55,7 +55,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 #html_theme = 'sphinx_rtd_theme'
-html_theme = 'sphinx_material'
+#html_theme = 'sphinx_material'
+html_theme = 'renku'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -65,9 +66,9 @@ html_static_path = ['_static']
 # sphinx-gallery configuration
 sphinx_gallery_conf = {
     # path to your example scripts
-    'examples_dirs': ['../first_steps_with_swot'],
+    'examples_dirs': ['../first_steps_with_swot', '../general_tips'],
     # path to where to save gallery generated output
-    'gallery_dirs': ['swot_gallery'],
+    'gallery_dirs': ['swot_gallery','tips'],
     # specify that examples should be ordered according to filename
     'within_subsection_order': FileNameSortKey,
     # directory where function granular galleries are stored

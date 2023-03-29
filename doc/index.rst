@@ -20,6 +20,7 @@ to document your module.
    :caption: Galleries:
 
    swot_gallery/index
+   tips/index
 
 
 Indices and tables
