@@ -20,7 +20,7 @@ from sphinx_gallery.sorting import FileNameSortKey
 
 # -- Project information -----------------------------------------------------
 
-project = 'sample-project'
+project = 'hydroweb.next_tutorials'
 copyright = '2023, CNES'
 author = 'CNES'
 
@@ -55,6 +55,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 #html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_material'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
