@@ -20,6 +20,7 @@ For more information, please refer to EODAG Documentation https://eodag.readthed
 # %% Libraries
 from eodag import EODataAccessGateway, SearchResult
 from eodag import setup_logging
+# sphinx_gallery_thumbnail_path = '_static/hydrowebnext.png'
 
 setup_logging(1)  # 0: nothing, 1: only progress bars, 2: INFO, 3: DEBUG
 
@@ -53,6 +54,6 @@ for query_args in project_query_args:
 # %%
 # Download
 downloaded_paths = dag.download_all(project_search_results, outputs_prefix=path_out)
-print(f"files succesfully downloaded in {downloaded_paths})
+print(f"files succesfully downloaded in {downloaded_paths}")
 
 

@@ -74,6 +74,7 @@ sphinx_gallery_conf = {
     # Modules for which function level galleries are created.  In
     # this case sphinx_gallery and numpy in a tuple of strings.
     #'doc_module': ('SampleModule'),
+    'show_memory': True,
 }
 
 # configuration for intersphinx: refer to the Python standard library.
