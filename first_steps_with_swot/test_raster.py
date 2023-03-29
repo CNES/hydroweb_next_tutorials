@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Copyright CNES
- 
-
 """
 Read and plot a SWOT-HR Raster products 
 ==========================================================================
@@ -34,7 +31,10 @@ file_swot_raster = os.path.join(
 # read data with xarray
 xr_swot_raster = xr.open_dataset(file_swot_raster)
 # force xarray to acknowledge the CRS 
-xr_swot_raster.rio.set_crs(CRS.from_user_input(xr_swot_raster.crs.projected_crs_name).to_epsg(), inplace=True)
+xr_swot_raster.rio.set_crs(
+    CRS.from_user_input(xr_swot_raster.crs.projected_crs_name).to_epsg(), 
+    inplace=True,
+    )
 
 # %%
 # Should you want to quickly see what the data looks like, just use the following line. Lower in the example we will try to have something fancier.
@@ -113,6 +113,10 @@ cb1 = axs[1].pcolor(
     )
 # customize plot with pre-defined function
 customize_map(axs[1], cb1, "Water Fraction (%)")
+
 fig.show()
+
+# %%
+#
 
 
