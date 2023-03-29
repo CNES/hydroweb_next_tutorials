@@ -15,6 +15,7 @@ In this example, we show how to read the SWOT-HR raster 100m or 250m netcdf prod
 # Libraries
 
 import xarray as xr
+import rioxarray
 from pyproj import CRS
 import os
 import numpy as np
@@ -26,18 +27,18 @@ import matplotlib.pyplot as plt
 # ===================================================
 
 dir_swot = "_data"
-file_swot_raster100 = os.path.join(
+file_swot_raster = os.path.join(
                           dir_swot,
                           "SWOT_L2_HR_Raster_250m_UTM30T_N_x_x_x_001_042_036F_20220402T112059_20220402T112119_Dx0000_01.nc",
                           )
 # read data with xarray
-xr_swot_raster100 = xr.open_dataset(file_swot_raster100)
+xr_swot_raster = xr.open_dataset(file_swot_raster)
 # force xarray to acknowledge the CRS 
-xr_swot_raster100.rio.set_crs(CRS.from_user_input(xr_swot_raster100.crs.projected_crs_name).to_epsg(), inplace=True)
+xr_swot_raster.rio.set_crs(CRS.from_user_input(xr_swot_raster.crs.projected_crs_name).to_epsg(), inplace=True)
 
 # %%
 # Should you want to quickly see what the data looks like, just use the following line. Lower in the example we will try to have something fancier.
-xr_swot_raster100.wse.plot(cmap='cividis')
+xr_swot_raster.wse.plot(cmap='cividis')
 
 
 # %%
@@ -91,9 +92,9 @@ fig, axs = plt.subplots(
 # 1. plot Water Surface Elevation on map
 # plot data on the map with pcolor function
 cb0 = axs[0].pcolor(
-    xr_swot_raster100.longitude,
-    xr_swot_raster100.latitude,
-    xr_swot_raster100.wse,
+    xr_swot_raster.longitude,
+    xr_swot_raster.latitude,
+    xr_swot_raster.wse,
     transform=crs,
     cmap='cividis',
     )
@@ -102,9 +103,9 @@ customize_map(axs[0], cb0, "Water Surface Elevation (m)")
 
 # 2. plot Water Fraction on map
 cb1 = axs[1].pcolor(
-    xr_swot_raster100.longitude,
-    xr_swot_raster100.latitude,
-    xr_swot_raster100.water_frac*100,
+    xr_swot_raster.longitude,
+    xr_swot_raster.latitude,
+    xr_swot_raster.water_frac*100,
     transform=crs,
     cmap='BuPu',
     vmin=0,
