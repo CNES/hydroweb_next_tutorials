@@ -94,7 +94,6 @@ fig0, ax0 = plt.subplots(
     )
 
 # plot data on the map with scatter function
-
 cb0 = ax0.scatter(
     x=xr_pxc.longitude,
     y=xr_pxc.latitude,
@@ -124,8 +123,16 @@ fig0.show()
 # %%
 # Pixel Cloud Vector
 # ==================
-# plot data on the map with scatter function
 
+# Create Figure and Axes
+crs = ccrs.PlateCarree()
+fig1, ax1 = plt.subplots(
+    subplot_kw={'projection': crs},
+    figsize=(16,9),
+    frameon=True,
+    )
+
+# plot data on the map with scatter function
 cb1 = ax1.scatter(
     x=xr_pxcvec.longitude_vectorproc,
     y=xr_pxcvec.latitude_vectorproc,
