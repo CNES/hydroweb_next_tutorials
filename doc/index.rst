@@ -9,11 +9,6 @@ Welcome to sample-project's documentation!
 This repository can be used as a template for using Sphinx and Sphinx-Gallery
 to document your module.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   getting_started
 
 .. toctree::
    :maxdepth: 2
