@@ -23,14 +23,14 @@ jobs:
           with:
             path: ~/conda_pkgs_dir
             key:
-              ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{
-              hashFiles('doc/environment.yml') }}
+              ${{ runner.os }}-conda-${{ env.CACHE_NUMBER }}-${{hashFiles('doc/environment.yml') }}
       - name: Setup conda environment with mambaforge
         uses: conda-incubator/setup-miniconda@v2
         with:
           use-mamba: true
           activate-environment: tutorials_env
           environment-file: doc/environment.yml
+          use-only-tar-bz2: true
           miniforge-variant: Mambaforge
           auto-activate-base: false
       - name: Sphinx build
