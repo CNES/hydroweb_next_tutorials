@@ -2,8 +2,8 @@
 # coding: utf-8
 
 """
-Download products from your `hydroweb.next project <https://hydroweb.next.theia-land.fr> using `EODAG <https://github.com/CS-SI/eodag>`
-=======================================================================================================================================
+Download products from your `hydroweb.next project <https://hydroweb.next.theia-land.fr>`_ using `EODAG <https://github.com/CS-SI/eodag>`_
+==========================================================================================================================================
 
 
 Follow these steps: 

@@ -6,7 +6,7 @@
 Welcome to hydroweb.next tutorials!
 ==========================================
 
-This website centralizes tips and examples on how to use the products downloaded from `hydroweb.next <https://hydroweb.next.theia-land.fr/>`.
+This website centralizes tips and examples on how to use the products downloaded from `hydroweb.next <https://hydroweb.next.theia-land.fr/>_`.
 Should you like to have more examples or contribute, please contact us from hydroweb.next.
 
 
