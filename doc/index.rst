@@ -3,11 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to sample-project's documentation!
+Welcome to hydroweb.next tutorials!
 ==========================================
 
-This repository can be used as a template for using Sphinx and Sphinx-Gallery
-to document your module.
+This website centralizes tips and examples on how to use the products downloaded from `hydroweb.next <https://hydroweb.next.theia-land.fr/>`.
+Should you like to have more examples or contribute, please contact us from hydroweb.next.
 
 
 .. toctree::
@@ -18,9 +18,3 @@ to document your module.
    tips/index
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
