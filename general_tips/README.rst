@@ -1,4 +1,4 @@
-Sample gallery for general tips
+General tips
 ===============================
+Here are a few tips on how to download data from hydroweb.next with a python API
 
-Contact us at exp.hysope2.cnes.fr to have more examples

@@ -1,6 +1,5 @@
-Sample gallery SWOT beginners
-=============================
+First Steps with SWOT Data
+==========================
 
-Below are examples for SWOT HR beginners
+Basic examples on how to use SWOT HR data
 
-Contact us at exp.hysope2.cnes.fr to have more examples
