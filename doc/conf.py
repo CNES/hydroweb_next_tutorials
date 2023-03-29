@@ -73,7 +73,7 @@ html_theme_options = {
            "sizes": "32x32",
            "href": "hydrowebnext-32x32.png",
         },
-    ]
+    ],
     "icon_links": [
         {
             "name": "CNES",
