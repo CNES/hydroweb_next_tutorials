@@ -81,19 +81,21 @@ def customize_map(ax, cb, label, crs=ccrs.PlateCarree()):
     return ax
 
 
+# %%
+# Pixel Cloud
+# ===========
+
 # Create Figure and Axes
 crs = ccrs.PlateCarree()
-fig, axs = plt.subplots(
-    nrows=1,ncols=2,
+fig0, ax0 = plt.subplots(
     subplot_kw={'projection': crs},
     figsize=(16,9),
     frameon=True,
     )
 
-# Pixel Cloud Data
 # plot data on the map with scatter function
 
-cb0 = axs[0].scatter(
+cb0 = ax0.scatter(
     x=xr_pxc.longitude,
     y=xr_pxc.latitude,
     c=xr_pxc.height,
@@ -104,9 +106,9 @@ cb0 = axs[0].scatter(
     vmax=300,
     )
 # Initiate a map with the function above for Pixel cloud
-customize_map(axs[0], cb0, "Water Surface Height (m)")
+customize_map(ax0, cb0, "Water Surface Height (m)")
 # limit map boundaries based on actual data
-axs[0].set_extent(
+ax0.set_extent(
     [
         xr_pxc.longitude.min(),
         xr_pxc.longitude.max(),
@@ -115,13 +117,16 @@ axs[0].set_extent(
     ], 
     crs=crs
     )
-axs[0].set_title("Pixel Cloud")
+ax0.set_title("Pixel Cloud")
+fig0.show()
 
 
-# Pixel Cloud Vector Data.
+# %%
+# Pixel Cloud Vector
+# ==================
 # plot data on the map with scatter function
 
-cb1 = axs[1].scatter(
+cb1 = ax1.scatter(
     x=xr_pxcvec.longitude_vectorproc,
     y=xr_pxcvec.latitude_vectorproc,
     c=xr_pxcvec.height_vectorproc,
@@ -132,21 +137,15 @@ cb1 = axs[1].scatter(
     vmax=300,
     )
 # Initiate a map with the function above for Pixel cloud
-customize_map(axs[1], cb1, "Water Surface Height (m)")
+customize_map(ax1, cb1, "Water Surface Height (m)")
 # limit map boundaries based on actual data from reference dataset (for homogeneity)
-axs[1].set_extent(
-    axs[0].get_extent(),
-    # [
-        # xr_pxcvec.longitude_vectorproc.min(),
-        # xr_pxcvec.longitude_vectorproc.max(),
-        # xr_pxcvec.latitude_vectorproc.min(),
-        # xr_pxcvec.latitude_vectorproc.max(),
-    # ], 
+ax1.set_extent(
+    ax0.get_extent(),
     crs=crs
     )
 
-axs[1].set_title("Pixel Cloud Vector")
-fig.show()
+ax1.set_title("Pixel Cloud Vector")
+fig1.show()
 
 
 # %%
