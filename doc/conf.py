@@ -65,7 +65,7 @@ html_logo = "_static/hydrowebnext.png"
 
 html_theme_options = {
     "logo": {
-        "alt_text": "hydroweb.next"
+        "alt_text": "hydroweb.next tutorials"
     },
     "favicons": [
         {
@@ -83,8 +83,14 @@ html_theme_options = {
         },
         {
             "name": "Theia",
-            "url": "https://https://www.theia-land.fr/en/homepage-en/",
+            "url": "https://www.theia-land.fr/en/homepage-en/",
             "icon": "theia-logo-vertical.png",
+            "type": "local",
+        },
+        {
+            "name": "hydroweb.next",
+            "url": "https://www.hydroweb.next.theia-land.fr",
+            "icon": "hydrowebnext.png",
             "type": "local",
         },
    ]
