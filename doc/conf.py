@@ -113,6 +113,7 @@ sphinx_gallery_conf = {
     # this case sphinx_gallery and numpy in a tuple of strings.
     #'doc_module': ('SampleModule'),
     'show_memory': True,
+    'download_all_examples': False,
 }
 
 # configuration for intersphinx: refer to the Python standard library.
