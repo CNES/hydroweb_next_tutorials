@@ -13,7 +13,7 @@ In this example, we show how to read the SWOT-HR raster 100m or 250m netcdf prod
 
 import xarray as xr
 import rioxarray
-from pyproj import CRS
+from rasterio.crs import CRS
 import os
 import numpy as np
 import matplotlib.pyplot as plt

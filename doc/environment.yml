@@ -18,7 +18,5 @@ dependencies:
   - h5netcdf
   - cartopy>0.21 
   - geopandas
-  - eodag>2.9.0
-  - pyproj
   - rasterio
   - rioxarray
