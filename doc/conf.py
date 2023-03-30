@@ -20,7 +20,7 @@ from sphinx_gallery.sorting import FileNameSortKey
 
 # -- Project information -----------------------------------------------------
 
-project = 'hydroweb.next_tutorials'
+project = 'hydroweb.next tutorials'
 copyright = '2023, CNES'
 author = 'CNES'
 
@@ -89,7 +89,7 @@ html_theme_options = {
         },
         {
             "name": "hydroweb.next",
-            "url": "https://www.hydroweb.next.theia-land.fr",
+            "url": "https://hydroweb.next.theia-land.fr",
             "icon": "_static/hydrowebnext.png",
             "type": "local",
         },
