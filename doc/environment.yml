@@ -17,7 +17,7 @@ dependencies:
   - seaborn
   - xarray
   - h5netcdf
-  - cartopy>0.21 
+  - cartopy
   - geopandas
   - rasterio
   - rioxarray
