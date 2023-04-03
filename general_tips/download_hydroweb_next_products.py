@@ -8,11 +8,11 @@ Download products from your `hydroweb.next project <https://hydroweb.next.theia-
 
 Follow these steps: 
 1. If not already done, install EODAG latest version using `pip install -U eodag` or `conda update eodag`
-2a. Generate an API-Key from hydroweb.next portal in your user settings
-2b. Carefully store your API-Key
+2. Generate an API-Key from hydroweb.next portal in your user settings
+3. Carefully store your API-Key
  - either in your eodag configuration file (usually ~/.config/eodag/eodag.yml, automatically generated the first time you use eodag) in auth/credentials/apikey="PLEASE_CHANGE_ME"
  - or in an environment variable `export EODAG__HYDROWEB_NEXT__AUTH__CREDENTIALS__APIKEY="PLEASE_CHANGE_ME"`
-3. You are all set, run this script `python download_New_project.py`
+4. You are all set, run this script `python download_New_project.py`
 
 For more information, please refer to EODAG Documentation https://eodag.readthedocs.io
 """
