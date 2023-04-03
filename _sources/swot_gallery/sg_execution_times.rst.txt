@@ -1,0 +1,14 @@
+
+:orphan:
+
+.. _sphx_glr_swot_gallery_sg_execution_times:
+
+Computation times
+=================
+**00:03.831** total execution time for **swot_gallery** files:
+
++----------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_swot_gallery_plot_swot_pixc_pixcvec.py` (``plot_swot_pixc_pixcvec.py``) | 00:02.985 | 0.0 MB |
++----------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_swot_gallery_plot_swot_raster.py` (``plot_swot_raster.py``)             | 00:00.846 | 0.0 MB |
++----------------------------------------------------------------------------------------+-----------+--------+
